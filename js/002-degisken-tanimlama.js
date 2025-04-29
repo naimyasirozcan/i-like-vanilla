@@ -20,9 +20,9 @@ console.log(password)
 /* HATALI KULLANIM:  
 
 console.log(fullName)
-let fullName = "Hakan Yalcinkaya";
+let fullName = "Ozge Ozcan";
 */
-let fullName = "Hakan Yalcinkaya";
+let fullName = "Ozge Ozcan";
 
 // let ile tanimlanan degiskenin icindeki bilgiyi degistirmek:
 
