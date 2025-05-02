@@ -24,10 +24,14 @@ console.log(
 let number1 = "11"
 number1 = parseInt(number1)
 console.log("number1: ", number1, typeof(number1) )
-
+// icinden sadece sayiyi alir
 let number2 = "11px"
 number2 = parseInt(number2)
 console.log("number2: ", number2, typeof(number2) )
+
+let number22 = "11.5,4"
+number22 = parseFloat(number22)
+console.log("number22: ", number22, typeof(number22) )
 
 let number3 = "11.1"
 number3 = Number(number3)

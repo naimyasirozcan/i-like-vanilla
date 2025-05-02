@@ -1,9 +1,9 @@
 // ********** String Veri Turu Islemleri ********** 
 // https://www.w3schools.com/jsref/jsref_obj_string.asp
 
-let email = "hakanyalcinkaya@gmail.com"
-let firstName = "hakan"
-let lastName = "YALCINKAYA"
+let email = "naimyasirozcan@gmail.com"
+let firstName = "Naim Yasir"
+let lastName = "OZCAN"
 
 // string karakter sayisi -> length
 console.log( email.length )
@@ -18,7 +18,8 @@ console.log(firstName)
 
 firstName = firstName.toLowerCase()
 console.log(firstName)
-// String Icinde Istedigimiz Bilgiyi Aramak ve Yerini Bulmak -> search:
+
+// String Icinde Istedigimiz Bilgiyi Aramak ve Yerini Bulmak (indexini gosterir) -> search:
 console.log(email.search("@"))
 console.log( email[15] )
 
@@ -40,12 +41,13 @@ console.log(email)
 email.includes('dkfhsd') // false
 email.includes('@') // true
 
-// istedigim bilgiyle basladi mi ? bitti mi -> startsWidth, endsWidth :
+// istedigim bilgiyle basladi mi ? bitti mi -> startsWith, endsWith :
 console.log(
     email.endsWith('kodluyoruz.org')
 )
 
 // Ilk Harflerini Buyuk Yapmak
-firstName = "FIRST"
-lastName = "LAST"
+firstName = "nAim YasIr"
+lastName = "ozcaN"
 let fullName = `${firstName[0].toUpperCase()}${firstName.slice(1).toLowerCase()} ${lastName[0].toUpperCase()}${lastName.slice(1).toLowerCase()}`
+console.log(fullName)

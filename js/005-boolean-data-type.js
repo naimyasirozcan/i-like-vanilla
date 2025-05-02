@@ -26,3 +26,17 @@ Boolean(0 === 0) // true
 
 // Not: Karar Yapilari Kisminda Tekrar Anlatilacak
 Boolean(userName.length > 0) // true
+ let numberA = 1
+ let numberB = 2
+ let numberC = 3
+ let numberS = "3"
+ numberS = Number(numberS)
+
+ // kisisel denemelerim
+ 
+ console.log("a b'ye esit mi?: ", Boolean(numberA === numberB))
+ console.log("b c'ye esit mi?: ", Boolean(numberB === numberC))
+ console.log("b b'ye esit mi?: ", Boolean(numberB === numberB))
+ console.log("c s'ye esit mi?: ", Boolean(numberC === numberS))
+ console.log("string 0 ", Boolean('0'))
+

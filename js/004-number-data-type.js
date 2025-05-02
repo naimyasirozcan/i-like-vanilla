@@ -11,11 +11,12 @@ console.log(
     "Fiyat: ", total 
 )
 
+// string vs number
 let stringNumber = "11"
 console.log(stringNumber)
 let newNumber = Number(stringNumber)
 console.log(newNumber)
-console.log("Number Constructor icine bilgi gonderildi:", Number("111"))
+console.log("Number Constructor icine bilgi gonderildi:", Number('011'))
 
 // arttirma ve azaltma islemleri:
 let counter = 320
@@ -47,8 +48,8 @@ console.log( 17 % 2) // 0 ise cift, 1 ise tek
 console.log("Koli Kalan Urun Ornegi: ", 18 % 8)
 
 // us alma **:
-console.log(2 * 2 * 2 * 2)
-console.log(2 ** 4)
+console.log('2*2*2*2= ',2 * 2 * 2 * 2)
+console.log('ust alma test 2^4: ', 2 ** 4)
 
 // asagi yuvarlama islemi -> Math.floor:
 console.log("Asagi Yuvarlama:", Math.floor(1.9) )  // -> 1
@@ -57,4 +58,4 @@ console.log("Asagi Yuvarlama:", Math.floor(1.9) )  // -> 1
 console.log("Yukari Yuvarlama:", Math.ceil(1.9) ) // -> 2
 
 // yakina yuvarlama islemi -> Math.round :
-console.log("Yakina Yuvarlama: ", Math.round(1.5) ) // 1.4 ->1, 1.5 ->
+console.log("Yakina Yuvarlama: ", Math.round(1.50) ) // 1.4 ->1, 1.5 ->

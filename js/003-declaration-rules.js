@@ -32,6 +32,7 @@ console.log(info)
 // https://stackoverflow.com/questions/184618/what-is-the-best-comment-in-source-code-you-have-ever-encountered
 //When I wrote this, only God and I understood what I was doing
 //Now, God only knows
+
 let x = 1;  // bu dogru kullanim degil :(
 // x, y, z, k, i, e, gibi anlamsiz degisken isimlerini kullanmayin!
 
