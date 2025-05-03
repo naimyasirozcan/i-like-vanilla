@@ -11862,7 +11862,15 @@ textarea.form-control-lg {
   border-radius: 1rem;
 }
 .bg-glass-light {
-  background: linear-gradient(180deg, #ad98eb50, #ccecdf6e);
+  background: linear-gradient(135deg, #ad98eb50, #ccecdf6e);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari uyumu */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+.bg-glass-alt {
+  background: linear-gradient(180deg, #21037a6e, #380427ad);
 
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px); /* Safari uyumu */
@@ -11873,6 +11881,15 @@ body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #3c2974, #07492e);
   min-height: 100vh;
+}
+
+.navbar-dark {
+  background: rgba(0, 0, 0, 0.445); /* İsteğe göre rengi aç/koyulaştır */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari uyumu *//
+}
+html {
+  scroll-behavior: smooth;
 }
 
 /*# sourceMappingURL=style.css.map */
