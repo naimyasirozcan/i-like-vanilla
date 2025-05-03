@@ -1,1 +1,1 @@
-document.getElementById("test-paragraph").innerHTML = `Some `
+document.getElementById("test-paragraph").innerHTML = `this text changed by dom manipulation `

@@ -4,6 +4,9 @@
  * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+
+
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11851,12 +11854,25 @@ textarea.form-control-lg {
   }
 }
 
-.glass-background {
-  background: rgba(255, 255, 255, 0.404); /* İsteğe göre rengi aç/koyulaştır */
+.bg-glass-dark {
+  background: rgba(0, 0, 0, 0.445); /* İsteğe göre rengi aç/koyulaştır */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px); /* Safari uyumu */
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 1rem;
+}
+.bg-glass-light {
+  background: linear-gradient(180deg, #ad98eb50, #ccecdf6e);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari uyumu */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #3c2974, #07492e);
+  min-height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */
