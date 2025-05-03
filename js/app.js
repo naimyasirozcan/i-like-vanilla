@@ -1,1 +1,1 @@
-document.getElementById("test-paragraph").innerHTML = "DOM MANIPLUEYSIN YAPILMISTIR EFENIM!"
+document.getElementById("test-paragraph").innerHTML = `Some `

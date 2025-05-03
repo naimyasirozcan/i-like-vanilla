@@ -11,26 +11,94 @@
 </head>
 
 <body>
+    <!-- i've learn how to do navbar with bs5 -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark text-bg-dark px-5">
+        <div class="container-fluid justify-content-between align-items-center">
+            <a href="#" class="navbar-brand">My HTML-BS5-JS Project</a>
+        
+        <!-- hamburger menu button (mobile) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupport" aria-controls="navbarSupport"
+            aria-expanded="false" aria-label="Show/Close Menu">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupport">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#HeroSection" class="nav-link" aria-current="page">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#MyJavascriptProcess" class="nav-link" aria-current="page">Journey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Contact" class="nav-link" aria-current="page">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-    <div id="alert"></div>
-
-    
-
+    </nav>
     <main>
-        <nav>
-            <h1 id="greeting">My JavaScript Process</h1></nav>
-        <section class="hero py-5 ">
-            <div class="container text-center">
-                <h1 class="display-4 fw-bold">DOM exercise</h1>
-                <h3>this text added by dom (document.getElementById("test-paragraph").innerHTML = "DOM MANIPLUEYSIN YAPILMISTIR EFENIM!"):</h3>
-                <p id="test-paragraph"></p>
+        <section id="HeroSection" class="hero text-bg-danger mx-5 my-3 p-5 rounded-5" style="
+        background-image: url('assets/pink-neon-bg.jpg'); background-size: cover; background-position: center; background-attachment:scroll;
+        min-height: 10vh;">
+            <div class="container d-flex justify-content-left align-items-center">
+                <div class="p-5 glass-background rounded-5">
+                    <h1>Hello World!</h1>
+                    <p>This is the hero section of this website.</p>
+                </div>
+            </div>
+        </section>
+        <section id="MyJavascriptProcess" class="bg-warning rounded-5 p-5 mx-5 my-4">
+            <div class="container">
+                <header class="section-header">
+                    <h2>My Javascript Process is there!</h2>
+                    <p>These are my examples on my process</p>
+                </header>
+                <div class="row g-4 ">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card w-100 glass-background" style="min-height: 25rem;">
+                            <div class="card-header border-bottom border-light"><h4>Header</h4></div>
+                            <div class="card-body overflow-auto">
+                                    <h5 class="card-title">Dark card title</h5>
+                                    <p id="test-paragraph" class="card-text"></p>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card w-100 glass-background" style="min-height: 25rem;">
+                            <div class="card-header border-bottom border-light"><h4>Header</h4></div>
+                            <div class="card-body overflow-auto">
+                                    <h5 class="card-title">Dark card title</h5>
+                                    <p id="test-paragraph" class="card-text"></p>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card w-100 glass-background" style="min-height: 25rem;">
+                            <div class="card-header border-bottom border-light"><h4>Header</h4></div>
+                            <div class="card-body overflow-auto">
+                                    <h5 class="card-title">Dark card title</h5>
+                                    <p id="test-paragraph" class="card-text"></p>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
             </div>
         </section>
     </main>
+    <footer>
+
+    </footer>
 
 
 
     <script src="/js/app.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
 
 </html>

@@ -11851,4 +11851,12 @@ textarea.form-control-lg {
   }
 }
 
+.glass-background {
+  background: rgba(255, 255, 255, 0.404); /* İsteğe göre rengi aç/koyulaştır */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari uyumu */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+
 /*# sourceMappingURL=style.css.map */
