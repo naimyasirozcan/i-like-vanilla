@@ -7,7 +7,7 @@
     <title>Javascript Course</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    
+
 
 </head>
 
@@ -15,15 +15,15 @@
     <!-- i've learn how to do navbar with bs5 -->
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark px-5">
         <div class="container-fluid justify-content-between align-items-center">
-            <a href="#" class="navbar-brand"><img class="img-fluid" style="max-width: 120px;" src="assets/logo secondary.svg" alt=""></a>
-        
-        <!-- hamburger menu button (mobile) -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupport" aria-controls="navbarSupport"
-            aria-expanded="false" aria-label="Show/Close Menu">
-            <span class="navbar-toggler-icon"></span>
+            <a href="#" class="navbar-brand"><img class="img-fluid" style="max-width: 120px;"
+                    src="assets/i-like-vanilla-logo-light.svg" alt=""></a>
+
+            <!-- hamburger menu button (mobile) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupport"
+                aria-controls="navbarSupport" aria-expanded="false" aria-label="Show/Close Menu">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupport">
                 <ul class="navbar-nav text-end">
                     <li class="nav-item">
@@ -46,12 +46,12 @@
         min-height: 10vh;">
             <div class="container d-flex justify-content-center align-items-center">
                 <div class="p-5 text-center bg-glass-alt rounded-5">
-                    <h1>Hello World!</h1>
-                    <p>This is the hero section of this website.</p>
+                    <h1 id="heroGreeting">Hello World! Wellcome to my place. </h1>
+                    <p id="heroParagraph">This is the hero section of this website.</p>
                 </div>
             </div>
         </section>
-        <section id="MyJourney" class="text-light rounded-5 p-5 mx-5 my-4 bg-glass-dark">
+        <section id="Cards" class="text-light rounded-5 p-5 mx-5 my-4 bg-glass-dark">
             <div class="container">
                 <header class="section-header">
                     <h2>My Javascript Process is there!</h2>
@@ -59,15 +59,127 @@
                 </header>
                 <div class="row g-4 ">
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card w-100 rounded-4 text-light bg-glass-light" style="min-height: 25rem">
-                            <div class="card-header border-bottom border-light"><h4>Header</h4></div>
+                        <div class="card w-100 rounded-4 text-light bg-glass-light"
+                            style="min-height: 25rem; max-height: 25rem">
+                            <div class="card-header border-bottom border-light">
+                                <h4>Card 1</h4>
+                            </div>
                             <div class="card-body overflow-auto">
-                                    <h5 class="card-title">Dark card title</h5>
-                                    <p id="test-paragraph" class="card-text"></p>
+                                <h5 class="card-title">Dark card title</h5>
+                                <p id="test-paragraph-1" class="card-text"></p>
                             </div>
                         </div>
-                    </div>    
-                     
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div id="card2" class="card w-100 rounded-4 text-light bg-glass-light"
+                            style="min-height: 25rem; max-height: 25rem;">
+                            <div class="card-header border-bottom border-light">
+                                <h4>Card 2</h4>
+                            </div>
+                            <div class="card-body overflow-auto">
+                                <h5 class="card-title">Dark card title</h5>
+                                <p id="test-paragraph-2" class="card-text">Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Inventore quis quibusdam accusamus voluptatibus provident
+                                    laudantium facere mollitia sed natus eveniet! Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Fugit nam fuga accusamus nemo officiis provident rem, error
+                                    quaerat aperiam quas? Asperiores itaque ut magni fugiat nisi quasi error placeat
+                                    perspiciatis officiis praesentium delectus exercitationem illum dolorem suscipit
+                                    nesciunt, dicta tenetur natus iste cumque vero. Praesentium iusto at delectus
+                                    aperiam excepturi explicabo tenetur perspiciatis culpa esse corporis dolor nesciunt,
+                                    cupiditate, eveniet ad sint id repellat? Nostrum magni earum et alias consequuntur
+                                    unde. Quibusdam ad doloribus ipsum accusamus. Nulla tempora animi ad autem saepe
+                                    nihil nemo! Ipsa amet aspernatur adipisci corrupti, tempora dignissimos fugit ullam
+                                    velit quia aperiam veniam ipsum necessitatibus molestias.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card3" class="col-12 col-md-6 col-lg-4">
+                        <div class="card w-100 rounded-4 text-light bg-glass-light"
+                            style="min-height: 25rem; max-height: 25rem;">
+                            <div class="card-header border-bottom border-light">
+                                <h4>Card 3</h4>
+                            </div>
+                            <div class="card-body overflow-auto">
+                                <h5 class="card-title">Dark card title</h5>
+                                <p id="test-paragraph-3" class="card-text">Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Inventore quis quibusdam accusamus voluptatibus provident
+                                    laudantium facere mollitia sed natus eveniet! Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Fugit nam fuga accusamus nemo officiis provident rem, error
+                                    quaerat aperiam quas? Asperiores itaque ut magni fugiat nisi quasi error placeat
+                                    perspiciatis officiis praesentium delectus exercitationem illum dolorem suscipit
+                                    nesciunt, dicta tenetur natus iste cumque vero. Praesentium iusto at delectus
+                                    aperiam excepturi explicabo tenetur perspiciatis culpa esse corporis dolor nesciunt,
+                                    cupiditate, eveniet ad sint id repellat? Nostrum magni earum et alias consequuntur
+                                    unde. Quibusdam ad doloribus ipsum accusamus. Nulla tempora animi ad autem saepe
+                                    nihil nemo! Ipsa amet aspernatur adipisci corrupti, tempora dignissimos fugit ullam
+                                    velit quia aperiam veniam ipsum necessitatibus molestias.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Lists" class="text-light rounded-5 p-5 mx-5 my-4 bg-glass-dark">
+            <div class="container">
+                <header class="section-header">
+                    <h2>My Javascript Process is there!</h2>
+                    <p>These are my examples on my process</p>
+                </header>
+                <div class="row g-4 ">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card w-100 rounded-4 text-bg-light bg-glass-light"
+                            style="min-height: 25rem; max-height: 25rem">
+                            <div class="card-header border-bottom border-light">
+                                <h4>List 1</h4>
+                            </div>
+                            <ul id="list1" class="list-group overflow-auto">
+                                <a href="#" class="list-group-item list-group-item-action active">
+                                    Cras justo odio
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                                <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                                <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at
+                                    eros</a>
+                                </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card w-100 rounded-4 text-bg-light bg-glass-light"
+                            style="min-height: 25rem; max-height: 25rem">
+                            <div class="card-header border-bottom border-light">
+                                <h4>List 2</h4>
+                            </div>
+                            <div id="list2" class="list-group overflow-auto">
+                                <a href="#" class="list-group-item list-group-item-action active">
+                                    Cras justo odio
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                                <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                                <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at
+                                    eros</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card w-100 rounded-4 text-bg-light bg-glass-light"
+                            style="min-height: 25rem; max-height: 25rem">
+                            <div class="card-header border-bottom border-light">
+                                <h4>List 3</h4>
+                            </div>
+                            <div id="list3" class="list-group overflow-auto">
+                                <a href="#" id="list3item1" class="list-group-item list-group-item-action active">
+                                    Cras justo odio
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                                <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                                <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at
+                                    eros</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
