@@ -13,10 +13,10 @@
 
 <body>
     <!-- i've learn how to do navbar with bs5 -->
-    <nav class="navbar navbar-expand-lg sticky-top navbar-dark px-5">
+    <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top navbar-dark navbar-default px-5">
         <div class="container-fluid justify-content-between align-items-center">
             <a href="#" class="navbar-brand"><img class="img-fluid" style="max-width: 120px;"
-                    src="assets/i-like-vanilla-logo-light.svg" alt=""></a>
+                    src="assets/logo secondary.svg" alt=""></a>
 
             <!-- hamburger menu button (mobile) -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupport"
@@ -41,21 +41,78 @@
 
     </nav>
     <main>
-        <section id="HeroSection" class="hero text-white mx-5 my-3 p-5 rounded-5" style="
-        background-image: url('assets/pink-neon-bg.jpg'); background-size: cover; background-position: center;
-        min-height: 10vh;">
-            <div class="container d-flex justify-content-center align-items-center">
-                <div class="p-5 text-center bg-glass-alt rounded-5">
-                    <h1 id="heroGreeting">Hello World! Wellcome to my place. </h1>
-                    <p id="heroParagraph">This is the hero section of this website.</p>
+        <section id="HeroSection" class="hero text-white bg-glass-dark p-5" style="border-radius: 0; border: none; background-image: url('/assets/gpt-bg.png'); background-size: cover; background-position: center;">
+            <div class="container-fluid p-5 mt-5" >
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div style="height: 100%;">
+                            <div class="pe-5">
+                                <h1>Wellcome!</h1>
+                                <p> I am creating this website with HTML, Bootstrap and Vanilla JS!</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-8">
+                        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner  rounded-5">
+                                <div class="carousel-item active">
+                                    <img src="/assets/mic.jpg" class="d-block w-100 rounded-5"
+                                        alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>First slide label</h5>
+                                        <p>Some representative placeholder content for the first slide.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item active">
+                                    <img src="/assets/keyboard.jpg" class="d-block w-100 rounded-5"
+                                        alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>First slide label</h5>
+                                        <p>Some representative placeholder content for the first slide.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item active">
+                                    <img src="/assets/code screen.jpg" class="d-block w-100 rounded-5"
+                                        alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>First slide label</h5>
+                                        <p>Some representative placeholder content for the first slide.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+
+                    </div>
+
+
                 </div>
             </div>
         </section>
         <section id="Cards" class="text-light rounded-5 p-5 mx-5 my-4 bg-glass-dark">
             <div class="container">
                 <header class="section-header">
-                    <h2>My Javascript Process is there!</h2>
-                    <p>These are my examples on my process</p>
+                    <h2>Exercise with cards.</h2>
+                    <p>These are my example exercises of my process.</p>
                 </header>
                 <div class="row g-4 ">
                     <div class="col-12 col-md-6 col-lg-4">
@@ -120,19 +177,19 @@
             </div>
         </section>
         <section id="Lists" class="text-light rounded-5 p-5 mx-5 my-4 bg-glass-dark">
-            <div class="container">
+            <div class="container mx-auto">
                 <header class="section-header">
-                    <h2>My Javascript Process is there!</h2>
-                    <p>These are my examples on my process</p>
+                    <h2>Exercises with lists.</h2>
+                    <p>These are my example exercises of my process.</p>
                 </header>
-                <div class="row g-4 ">
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card w-100 rounded-4 text-bg-light bg-glass-light"
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card w-100 rounded-4 text-light bg-glass-light"
                             style="min-height: 25rem; max-height: 25rem">
                             <div class="card-header border-bottom border-light">
                                 <h4>List 1</h4>
                             </div>
-                            <ul id="list1" class="list-group overflow-auto">
+                            <div id="list1" class="list-group overflow-auto">
                                 <a href="#" class="list-group-item list-group-item-action active">
                                     Cras justo odio
                                 </a>
@@ -141,11 +198,11 @@
                                 <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
                                 <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at
                                     eros</a>
-                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card w-100 rounded-4 text-bg-light bg-glass-light"
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card w-100 rounded-4 text-light bg-glass-light"
                             style="min-height: 25rem; max-height: 25rem">
                             <div class="card-header border-bottom border-light">
                                 <h4>List 2</h4>
@@ -162,8 +219,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card w-100 rounded-4 text-bg-light bg-glass-light"
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card w-100 rounded-4 text-light bg-glass-light"
                             style="min-height: 25rem; max-height: 25rem">
                             <div class="card-header border-bottom border-light">
                                 <h4>List 3</h4>
@@ -180,12 +237,254 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card w-100 rounded-4 text-light bg-glass-light"
+                            style="min-height: 25rem; max-height: 25rem">
+                            <div class="card-header border-bottom border-light">
+                                <h4>List 4</h4>
+                            </div>
+                            <div id="list4" class="list-group overflow-auto">
+                                <a href="#" id="list4item1" class="list-group-item list-group-item-action active">
+                                    Cras justo odio
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                                <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                                <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at
+                                    eros</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Content" class="text-light rounded-5 p-5 mx-5 my-4 bg-glass-dark">
+            <div class="container">
+                <h2 class="text-center pb-4">Content</h2>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <article class="row text-light bg-glass-light rounded-4 mb-3 p-3 card" style="max-height: 16rem;">
+
+
+                            <div class="row card-body overflow-auto">
+
+                                <div class="col-sm-8">
+
+                                    <h2 class="p1">A content.</h2>
+
+                                    <p class="p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                                        maxime minus saepe expedita reprehenderit quas eos hic soluta dolor, dolorem
+                                        vitae!
+                                        Cum accusantium maxime voluptatibus a eaque magnam id mollitia sit obcaecati
+                                        reiciendis, saepe placeat itaque, Lorem, ipsum dolor sit amet consectetur
+                                        adipisicing elit. Possimus nobis quae labore officia ullam nihil beatae
+                                        distinctio
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut a maxime
+                                        commodi,
+                                        repudiandae id sapiente, mollitia recusandae accusantium nemo eveniet iure
+                                        ratione
+                                        eos voluptates dolor obcaecati laudantium illum eligendi minima voluptatem
+                                        eius
+                                        maiores libero, cupiditate neque. Corrupti dicta nulla, natus doloribus
+                                        sequi
+                                        sapiente dolorum laboriosam tempora illum, recusandae repudiandae
+                                        voluptatibus a
+                                        accusamus. Fuga quis doloremque quam vero explicabo expedita, facilis ut rem
+                                        velit
+                                        iure soluta numquam eligendi dolore iste cupiditate necessitatibus error
+                                        perferendis
+                                        est optio saepe voluptas fugit? Cum dolor laborum dolore facilis autem
+                                        obcaecati
+                                        impedit molestias omnis, voluptate fuga ad, harum velit nostrum consequatur
+                                        quis in
+                                        eveniet iure fugiat!
+                                        !</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <img class="img-thumbnail rounded-4" src="https://picsum.photos/400/300" alt="">
+                                </div>
+
+
+                            </div>
+
+
+
+                        </article>
+                        <article class="row text-light bg-glass-light rounded-4 mb-3 p-3 card" style="max-height: 16rem;">
+
+
+                            <div class="row card-body overflow-auto">
+
+                                <div class="col-sm-8">
+
+                                    <h2 class="p1">A content.</h2>
+
+                                    <p class="p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                                        maxime minus saepe expedita reprehenderit quas eos hic soluta dolor, dolorem
+                                        vitae!
+                                        Cum accusantium maxime voluptatibus a eaque magnam id mollitia sit obcaecati
+                                        reiciendis, saepe placeat itaque, Lorem, ipsum dolor sit amet consectetur
+                                        adipisicing elit. Possimus nobis quae labore officia ullam nihil beatae
+                                        distinctio
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut a maxime
+                                        commodi,
+                                        repudiandae id sapiente, mollitia recusandae accusantium nemo eveniet iure
+                                        ratione
+                                        eos voluptates dolor obcaecati laudantium illum eligendi minima voluptatem
+                                        eius
+                                        maiores libero, cupiditate neque. Corrupti dicta nulla, natus doloribus
+                                        sequi
+                                        sapiente dolorum laboriosam tempora illum, recusandae repudiandae
+                                        voluptatibus a
+                                        accusamus. Fuga quis doloremque quam vero explicabo expedita, facilis ut rem
+                                        velit
+                                        iure soluta numquam eligendi dolore iste cupiditate necessitatibus error
+                                        perferendis
+                                        est optio saepe voluptas fugit? Cum dolor laborum dolore facilis autem
+                                        obcaecati
+                                        impedit molestias omnis, voluptate fuga ad, harum velit nostrum consequatur
+                                        quis in
+                                        eveniet iure fugiat!
+                                        !</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <img class="img-thumbnail rounded-4" src="https://picsum.photos/400/300" alt="">
+                                </div>
+
+
+                            </div>
+
+
+
+                        </article>
+                        <article class="row text-light bg-glass-light rounded-4 mb-3 p-3 card" style="max-height: 16rem;">
+
+
+                            <div class="row card-body overflow-auto">
+
+                                <div class="col-sm-8">
+
+                                    <h2 class="p1">A content.</h2>
+
+                                    <p class="p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                                        maxime minus saepe expedita reprehenderit quas eos hic soluta dolor, dolorem
+                                        vitae!
+                                        Cum accusantium maxime voluptatibus a eaque magnam id mollitia sit obcaecati
+                                        reiciendis, saepe placeat itaque, Lorem, ipsum dolor sit amet consectetur
+                                        adipisicing elit. Possimus nobis quae labore officia ullam nihil beatae
+                                        distinctio
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut a maxime
+                                        commodi,
+                                        repudiandae id sapiente, mollitia recusandae accusantium nemo eveniet iure
+                                        ratione
+                                        eos voluptates dolor obcaecati laudantium illum eligendi minima voluptatem
+                                        eius
+                                        maiores libero, cupiditate neque. Corrupti dicta nulla, natus doloribus
+                                        sequi
+                                        sapiente dolorum laboriosam tempora illum, recusandae repudiandae
+                                        voluptatibus a
+                                        accusamus. Fuga quis doloremque quam vero explicabo expedita, facilis ut rem
+                                        velit
+                                        iure soluta numquam eligendi dolore iste cupiditate necessitatibus error
+                                        perferendis
+                                        est optio saepe voluptas fugit? Cum dolor laborum dolore facilis autem
+                                        obcaecati
+                                        impedit molestias omnis, voluptate fuga ad, harum velit nostrum consequatur
+                                        quis in
+                                        eveniet iure fugiat!
+                                        !</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <img class="img-thumbnail rounded-4" src="https://picsum.photos/400/300" alt="">
+                                </div>
+
+
+                            </div>
+
+
+
+                        </article>
+                    </div>
+                    <aside class="d-none d-lg-block col-sm-4 ps-5">
+                        <div class="container">
+                            <h3>Details & Tags</h3>
+                        <div class="list-group">
+                            <li class="list-group-item list-group-item-action">Lorem.</li>
+                            <li class="list-group-item list-group-item-action">Perspiciatis!</li>
+                            <li class="list-group-item list-group-item-action">Harum?</li>
+                        </div>
+                        </div>
+                    </aside>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="py-5 bg-glass-dark text-light">
+        <div class="container text-light p-5 rounded-4">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">About</a></li>
+                    </ul>
+                </div>
 
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5 offset-md-1 mb-3">
+                    <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of what's new and exciting from us.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address"
+                                data-sharkid="__0" data-sharklabel="email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                            <shark-icon-container data-sharkidcontainer="__0"></shark-icon-container>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p>© 2025 nyoworks, Inc. All rights reserved.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#twitter"></use>
+                            </svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#instagram"></use>
+                            </svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#facebook"></use>
+                            </svg></a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
 
 
