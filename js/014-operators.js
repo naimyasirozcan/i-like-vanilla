@@ -2,7 +2,7 @@
 // https://www.w3schools.com/js/js_comparisons.asp
 
 let price = "0"
-let user = "hakan"
+let user = "yaso"
 
 // == Eşitse
 console.log("== :", price == 1 )
@@ -13,7 +13,7 @@ console.log("=== :", price === 1 )
 console.log("=== :", price === 100 )
 
 // != Eşit değilse
-console.log(user != "guest" )
+console.log(user != "guest")
 
 // < Küçükse
 console.log("price < 100", price < 100)
@@ -30,7 +30,7 @@ console.log("price >= 100", price >= 100)
 
 // && ve
 price = 0
-console.log( price > 0 && user != "guest" )
+console.log( 've', (price > 0 && user != "guest") )
 
 // || veya
 console.log( price > 0 || user != "guest" )
@@ -39,3 +39,11 @@ console.log( price > 0 || user != "guest" )
 user = "guest"
 price = 1
 console.log( price > 0 && !user == "guest" )
+
+// alistirma 
+
+let x = 10
+let y = 10
+
+console.log('x != y', (x != y))
+console.log('x !== y', (x !== y))
