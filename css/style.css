@@ -11804,6 +11804,7 @@ textarea.form-control-lg {
     text-align: center !important;
   }
 }
+
 @media (min-width: 1200px) {
   .fs-1 {
     font-size: 2.5rem !important;
@@ -11818,6 +11819,7 @@ textarea.form-control-lg {
     font-size: 1.5rem !important;
   }
 }
+
 @media print {
   .d-print-inline {
     display: inline !important;
@@ -11861,22 +11863,23 @@ textarea.form-control-lg {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 1rem;
 }
+
 .bg-glass-light {
   background: linear-gradient(135deg, #c4e0d538, #4be0a253);
-
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px); /* Safari uyumu */
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 1rem;
 }
+
 .bg-glass-alt {
   background: linear-gradient(180deg, #21037a6e, #380427ad);
-
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px); /* Safari uyumu */
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 1rem;
 }
+
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #261657, #0d6742);
@@ -11923,13 +11926,18 @@ html {
   color: rgb(225, 60, 88) !important;
 }
 
+/* TOSS GAME ELEMENTS  */
+
 .toss-container {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 75vh;
   overflow: hidden;
   background-image: url(/assets/toss-default.png);
   border-radius: 100px;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.4s ease-in-out;
 }
 
 .toss-btn {
@@ -11943,9 +11951,88 @@ html {
   border-radius: 100%;
 }
 
+#tossWalletCon {
+  position: absolute;
+  width: 200px;
+  padding: 10px;
+  height: 120px;
+  border-radius: 20px;
+  left: 40px;
+  top: 30px;
+  color: #000;
+  background-color: var(--bs-gray-500);
+}
+
+#tossSurface {
+  max-width: 66px;
+}
+
+#tossHead {
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  border-radius: 30px;
+  color: #000;
+  background-color: yellow;
+  left: 100px;
+  top: 600px;
+}
+
+#tossTails {
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  border-radius: 30px;
+  color: #000;
+  background-color: rgb(221, 121, 64);
+  left: 180px;
+  top: 600px;
+}
+
+#headOrTails {
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  color: #000;
+  left: 30px;
+  top: 480px;
+}
+
+#headOrTailsChoice {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  color: #000;
+  left: 80px;
+  top: 530px;
+}
+
+#tossAlert {
+  position: absolute;
+  height: 200px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  bottom: 250px;  
+  right: 420px;
+  background-color: #dc3545;
+  border-radius: 20px;
+}
+
+#roundResult {
+  position: absolute;
+  height: 170px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  bottom: 460px;  
+  right: 640px;
+  background-color: #0dcaf0;
+  border-radius: 20px;
+}
+
 .flip {
   animation: flipCoin 1s ease-in-out forwards !important;
-
 }
 
 @keyframes flipCoin {
@@ -11960,46 +12047,40 @@ html {
   }
 }
 
-.calculator-container {
-   position: relative;
-  width: 100%;
-  height: 70vh;
-  overflow: hidden;
-  background-color: #0dcaf0;
-  border-radius: 100px;
-
-}
-.toss-score-board {
-  position: absolute;
-  width: 200px;
-  padding: 10px;
-  height: 120;
-  border-radius: 20px;
-  left: 40px;
-  top: 30px;
-}
 
 
 /*# sourceMappingURL=style.css.map */
+
+/* A FACE  */
+
+.character-face {
+  position: relative;
+  width: 666px;
+  height: 666px;
+  overflow: hidden;
+  background-color: #0dcaf0;
+  border-radius: 100px;
+  left: 300px;
+}
+
 #eye1 {
   background-color: #000;
   height: 100px;
   width: 100px;
   position: absolute;
-  left: 300px;
+  left: 200px;
   top: 200px;
   border-radius: 50%;
-
 }
+
 #eye2 {
   background-color: #000;
   height: 100px;
   width: 100px;
   position: absolute;
-  left: 600px;
+  left: 400px;
   top: 200px;
   border-radius: 50%;
-
 }
 
 #nose {
@@ -12007,6 +12088,57 @@ html {
   width: 50px;
   position: absolute;
   top: 300px;
+  left: 320px;
   border-radius: 30px;
   background-color: #046d82;
+}
+
+#mouth {
+  height: 50px;
+  width: 200px;
+  position: absolute;
+  top: 460px;
+  left: 250px;
+  border-radius: 30px;
+  background-color: #650000;
+}
+
+#rightEyePupil1 {
+  background-color:#fff;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 230px;
+  top: 230px;
+  border-radius: 50%;
+}
+
+#rightEyePupil2 {
+  background-color: #000;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 245px;
+  top: 245px;
+  border-radius: 50%;
+}
+
+#leftEyePupil1 {
+  background-color:#fff;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 230px;
+  top: 230px;
+  border-radius: 50%;
+}
+
+#leftEyePupil2 {
+  background-color: #000;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 245px;
+  top: 245px;
+  border-radius: 50%;
 }

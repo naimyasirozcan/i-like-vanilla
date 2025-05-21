@@ -446,7 +446,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
-                                        <h6 class= "text-body-secondary">Card subtitle</h6>
+                                        <h6 class="text-body-secondary">Card subtitle</h6>
                                         <p class="card-text">Some quick example text to build on the card title and make
                                             up the bulk of the card’s content.</p>
                                         <a href="#" class="card-link">Card link</a>
@@ -500,20 +500,40 @@
         <section id="toss" class="p-5 text-light text-center">
             <div class="container p-5">
                 <div class="row g-4">
-                    <h1>Number Guess Game</h1>
+                    <h1>Head or Tails</h1>
+                    <h3>I'm developing my Paint skills!</h3>
                     <div class=" col-12 toss-container">
-                        <button type="button" id="tossBtn" class="toss-btn"><h1 class="text-light">1$</h1></button>
 
-                        <div class="toss-score-board text-bg-light text-center d-flex align-items-center justify-content-center">
-                            <h2>Score:</h2>
-                            <h2 id="tossScore"></h2>
+                        <div id="tossWalletCon">
+                            <h2>Wallet:</h2>
+                            <h2 id="tossWallet"></h2>
                         </div>
+
+                        <button type="button" id="tossBtn" class="toss-btn"></button>
+
+                        <h2 id="headOrTails">HEAD OR TAILS?</h2>
+                        <h3 id="headOrTailsChoice"></h3>
+
+                        <button id="tossHead">HEAD</button>
+                        <button id="tossTails">TAILS</button>
+                        
+                        <!-- toss alert  -->
+                        <button id="tossAlert" class="d-none">
+                            YOU NEED TO CHOOSE HEAD OR TAILS FROM THE LEFT BOTTOM CORNER!
+                            (click to close)
+                        </button>
+                        <!-- toss alert  -->
+
+                        <!-- round result  -->
+                        <button id="roundResult" class="d-none">
+                        </button>
+                        <!-- round result  -->
 
                     </div>
                 </div>
             </div>
         </section>
-        <!-- GUESS GAME END  -->
+        <!-- TOSS END  -->
 
         <!-- -------------------------------------------------------------------- -->
 
@@ -521,23 +541,22 @@
         <section id="noteCalculator" class="p-5 text-light text-center">
             <div class="container p-5 bg-glass-light">
                 <div class="row g-4">
-                    <h1>Note Calculator</h1>
-                    <div class="calculator-container rounded-5">
-                        <div id="eye1">
-                            
-                        </div>
-                        <div id="eye2">
-
-                        </div>
-                        <div id="nose">
-                            
-                        </div>
+                    <h1>A Face</h1>
+                    <div class="character-face rounded-5">
+                        <div id="eye1"></div>
+                        <div id="rightEyePupil1"></div>
+                        <div id="rightEyePupil2"></div>
+                        <div id="leftEyePupil1"></div>
+                        <div id="leftEyePupil2"></div>
+                        <div id="eye2"></div>
+                        <div id="nose"></div>
+                        <div id="mouth"></div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- NOTE CALCULATOR END  -->
-        
+
     </main>
     <!-- MAIN END -->
     <!-- ==================================================================================================== -->
