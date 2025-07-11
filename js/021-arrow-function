@@ -1,0 +1,58 @@
+// // Arrow function Kullanimi
+// // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+// import { info } from "autoprefixer"
+
+// function hello(firstName) {
+//     console.log(`Merhaba ${firstName}`)
+// }
+
+// hello("JavaScript")
+
+// const helloFuncV1 = (firstName) => { console.log(`Merhaba ${firstName}`) } 
+// helloFuncV1("helloFuncV1")
+
+
+// const helloFuncV2 = firstName => console.log(`Merhaba ${firstName}`) // bir parametre, bir donus islemi
+// helloFuncV2("helloFuncV2")
+
+
+// const helloFuncV3 = (firstName, lastName) => console.log(
+//     `Merhaba ${firstName} ${lastName}`
+// ) // console.log parantezi
+
+// helloFuncV3("helloFuncV3", "Last Name info")
+
+// const helloFuncV4 = (firstName, lastName) => {
+//     let info = `Merhaba ${firstName} ${lastName}`
+//     console.log(info) 
+//     return info
+// }
+
+// helloFuncV4("helloFuncV4", "Other Info")
+
+function hello(name){
+    console.log(`hosgelmissen ${name} gardasim.`)
+}
+
+hello('javascript')
+
+const helloFuncv1 = (firstName) => { console.log(`hosgelmissen vay dassakli gardasim benim ${firstName}`)}
+
+helloFuncv1('helloFunctionV1')
+
+const helloFuncV2 = firstName => console.log(`merhaba yavrum ${firstName} ne hos bir isimmm`)
+
+helloFuncV2('hellofuncv2')
+
+const helloFunctionV3 = (firstName, lastName) => console.log(`merhaba yavrum ${firstName} ne hos bir isim ve ${lastName} ne guzel soyismi`)
+
+helloFunctionV3('hellofunctionv3','ozcanogullarigiller')
+
+const helloFunctionV4 = (firstName,lastName) => {
+    let info = `bu 4. deneme, hosgeldin adi ${firstName} soyadi ${lastName} olan BABAYIGIT`
+console.log(info)
+return info
+}
+
+helloFunctionV4('yasir','ozcan')

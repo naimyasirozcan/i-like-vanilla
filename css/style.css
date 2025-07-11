@@ -12142,3 +12142,15 @@ html {
   top: 245px;
   border-radius: 50%;
 }
+
+#cta4 {
+  transition: all 0.1s ease;
+}
+
+
+/* form */
+
+#colorResultSquare {
+  width: 100px;
+  height: 100px;
+}
