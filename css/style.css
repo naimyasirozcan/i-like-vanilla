@@ -11885,11 +11885,13 @@ body {
   background: linear-gradient(135deg, #261657, #0d6742);
   min-height: 100vh;
 }
+/* =============================================================================== */
+/* NAVBAR  */
 
 .navbar-dark {
   background: rgba(0, 0, 0, 0.637); /* İsteğe göre rengi aç/koyulaştır */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px); /* Safari uyumu *//
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px); /* Safari uyumu *//
 }
 
 .navbar-default {
@@ -11925,6 +11927,8 @@ html {
 .text-pink {
   color: rgb(225, 60, 88) !important;
 }
+
+/* =============================================================================== */
 
 /* TOSS GAME ELEMENTS  */
 
@@ -12108,9 +12112,10 @@ html {
   height: 50px;
   width: 50px;
   position: absolute;
-  left: 230px;
+  left: 430px;
   top: 230px;
   border-radius: 50%;
+  z-index: 1;
 }
 
 #rightEyePupil2 {
@@ -12118,9 +12123,10 @@ html {
   height: 20px;
   width: 20px;
   position: absolute;
-  left: 245px;
+  left: 445px;
   top: 245px;
   border-radius: 50%;
+  z-index: 2;
 }
 
 #leftEyePupil1 {

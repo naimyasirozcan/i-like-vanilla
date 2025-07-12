@@ -33,13 +33,13 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupport">
                 <ul class="navbar-nav text-end">
                     <li class="nav-item">
-                        <a href="#HeroSection" class="nav-link" aria-current="page">About</a>
+                        <a href="#HeroSection" class="nav-link text-light" aria-current="page">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#MyJourney" class="nav-link" aria-current="page">Journey</a>
+                        <a href="#MyJourney" class="nav-link text-light" aria-current="page">Journey</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#Contact" class="nav-link" aria-current="page">Contact</a>
+                        <a href="#Contact" class="nav-link text-light" aria-current="page">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -64,6 +64,7 @@
                     <!-- greeting section  -->
                     <div class="col-sm-4">
                         <div style="height: 100%;">
+                            <!-- WELLCOME + BUTTON EVENTS EXAMPLES -->
                             <div class="pe-5">
                                 <h1 id="greetingHeader">Wellcome!</h1>
                                 <p id="greetingPar"> I am creating this website with HTML, Bootstrap and Vanilla JS!</p>
@@ -74,7 +75,22 @@
                                     <button id="cta4" style="position: absolute;" class="btn btn-warning">CTA4</button>
                                 </div>
                             </div>
+
+                            <!-- BASIC COUNTER  -->
+                            <div class="pe-5 mt-5">
+                                <h1 id="counterHeader">Basic Counter</h1>
+                                <p id="counterPar"> This is a basic counter example:</p>
+                                <div id="counterResultDiv" style="height: 100px;">
+                                    <h2 class="text-bg-light p-3 rounded-3 text-center" id="counterResult"> fds</h2>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-danger" id="decreaseBtn">-</button>
+                                    <p id="randomQuote"></p>
+                                    <button class="btn btn-success" id="increaseBtn">+</button>
+                                </div>
+                            </div>
                         </div>
+
 
                     </div>
                     <!-- greeting section  -->
@@ -547,10 +563,10 @@
         <section id="noteCalculator" class="p-5 text-light text-center">
             <div class="container mb-5 bg-glass-light">
 
-                <!-- FORM START -->
+                <!-- FORM SUBMIT START -->
                 <div class="row" style="width: 100%; height: auto;">
                     <div class="container p-5">
-                        <h1>Form</h1>
+                        <h1>Form Submit Example</h1>
                         <form action="#" id="formColor">
                             <select name="colors" id="selectColor" class="form-select mt-5 text-bg-light">
                                 <option value="success">Green</option>
@@ -566,12 +582,12 @@
                     </div>
                 </div>
 
-                <!-- FORM END  -->
+                <!-- FORM SUBMIT END  -->
             </div>
             <!-- FACE START  -->
             <div class="container p-5 bg-glass-light">
                 <div class="row g-4">
-                    <h1>A Face</h1>
+                    <h1>A Face with CSS</h1>
                     <div class="character-face rounded-5">
                         <div id="eye1"></div>
                         <div id="rightEyePupil1"></div>
