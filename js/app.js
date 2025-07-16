@@ -1,68 +1,97 @@
 
-//dom deneme
 console.log(`dom deneme konsola document id yazdirma: `, document.URL)
 
-let heroGreeting = document.querySelector(`#heroGreeting`)
-ItemroParagraph = document.querySelector(`#heroParagraph`)
+// ---------------------------------------------------------------------------------
+// STICKY TOP MENU LISTENER
 
+const navbar = document.querySelector('#mainNavbar')
 
-// HERO GREETING SECTION DECLARATIONS
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 333) {
+    navbar.classList.remove('navbar-default')
+  } else {
+    navbar.classList.add('navbar-default')
+  }
+})
 
-let greetingHeader = document.querySelector('#greetingHeader')
-
-let greetingPar = document.querySelector('#greetingPar')
-
-// EVENT LISTENER CALISMALARI
-
-// buton calismalari
-
-
-
-let greeting1 = document.querySelector(`#greetingBtn1`)
-let greeting2 = document.querySelector(`#greetingBtn2`)
-let greeting3 = document.querySelector(`#greetingBtn3`)
-let greeting4 = document.querySelector(`#greetingBtn4`)
-let cta4 = document.querySelector(`#cta4`)
-
-greeting1.addEventListener('click', domClick)
-greeting2.addEventListener('click', changeColor)
-greeting3.addEventListener('mouseover', showPopover)
-
-function domClick() {
-    this.classList.toggle('btn-danger')
-    this.classList.toggle('btn-warning')
-}
-
-function changeColor() {
-    this.style.color == 'red' ? this.style.color = 'black' : this.style.color = 'red'
-}
-function showPopover() {
-    alert('gelme ustume')
-}
-
-// BASIC COUNTER
-
-let plusBtn = document.querySelector(`#increaseBtn`)
-let minusBtn = document.querySelector(`#decreaseBtn`)
-let counterResultDOM = document.querySelector(`#counterResult`)
-let counter = 0
-counterResultDOM.innerHTML = counter
-
-const counterFunc = (e) => {
-  e.target.id == 'increaseBtn' ? counter ++ : counter --
-  counterResultDOM.innerHTML = counter
-}
-
-plusBtn.addEventListener('click', counterFunc)
-minusBtn.addEventListener('click', counterFunc)
-
-
-
-
-// greetingHeader.classList.add('text-dark')
 
 // ---------------------------------------------------------------------------------
 
+
+
+// HERO SECTION
+
+// EVENT LISTENER EXAMPLES
+
+// ---------------------------------------------------------------------------------
+// greeting section declarations
+
+// burada karsilama mesaji icin tanimlamalarimi yaptim ve kosula bagli olarak icerik ayarladim:
+
+let guestName
+// guestName = prompt('Welcome!') 
+let greetingHeader = document.querySelector('#greetingHeader')
+let greetingPar = document.querySelector('#greetingPar')
+
+if (guestName) {
+  (greetingHeader.innerHTML = `Hi <strong>${guestName[0].toUpperCase()}${guestName.toLowerCase().slice(1)}</strong>, welcome! You are visiting my page on: <span id="timeInfoDOM"></span>`)
+} else {
+  greetingHeader.innerHTML = `Hi, welcome dear guest! You are visiting my page on: <span id="timeInfoDOM"></span>`
+}
+
+// burada yukarida kosula bagli olarak inner html icerisine olusturdugum spanin tanimlamasini yaptim, tanimlama yukarida yapilirsa kod calismiyormus ogrenmis olduk
+
+let timeInfoDOM = document.querySelector('#timeInfoDOM')
+
+
+
+function getTimeLive() {
+  const now = new Date()
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+  const dayWeek = days[now.getDay()]
+  const months = ["Janruary", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const year = String(now.getFullYear())
+  const dayMonth = String(now.getDate())
+  const month = months[now.getMonth()]
+  const hour = String(now.getHours()).padStart(2, '0')
+  const minute = String(now.getMinutes()).padStart(2, '0')
+  const second = String(now.getSeconds()).padStart(2, '0')
+  const formattedTime = `${dayMonth} ${month} ${year} ${dayWeek} ${hour}:${minute}:${second}`
+  timeInfoDOM.innerHTML = `<strong style="color: wheat">${formattedTime}</strong>`
+}
+
+setInterval(getTimeLive, 1000)
+getTimeLive()
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------------------------------
+
+// LOCAL STORAGE USAGE FIRST TRY
+
+let user = {
+  name: 'yasir',
+  surname: 'ozcan',
+  level: 'c1'
+}
+
+console.log(user)
+
+localStorage.setItem('userInfo', JSON.stringify(user))
+
+let userInfo = localStorage.getItem('userInfo')
+
+userInfo = JSON.parse(userInfo)
+
+console.log(`local storagetan user bilgisi ${JSON.stringify(userInfo)}`)
+
+
+// ---------------------------------------------------------------------------------
 
 // CARDS
 
@@ -97,51 +126,6 @@ list3LastItem.classList.remove('disabled')
 
 // ---------------------------------------------------------------------------------
 
-// Sticky-top menu change color after scroll
-
-const navbar = document.querySelector('#mainNavbar')
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 333) {
-    navbar.classList.remove('navbar-default')
-  } else {
-    navbar.classList.add('navbar-default')
-  }
-})
-
-
-// ---------------------------------------------------------------------------------
-
-// PROMPT 
-
-// let guestNameDOM = prompt("Please enter your name.")
-
-// let guestName = guestNameDOM.split(" ")[0]
-
-// ---------------------------------------------------------------------------------
-
-
-//IF KULLANIMI
-
-// if (guestName === 'yasir') {
-//     greetingHeader.innerHTML = 'ADAM GELDI YA ADAM'
-//     greetingHeader.classList.add('text-danger')
-// } else if (guestName === 'ozge') {
-//     greetingHeader.innerHTML = (`HOSGELDIN DUNYANIN EN GUZEL KADINI ${guestName[0].toUpperCase()}${guestName.slice('1', (guestName.length))} KARICIMMMM`)
-//     greetingHeader.classList.add('text-pink','text-center')
-// } else {
-//     greetingHeader.innerHTML = 'Hosgeldin. Sen miydin. -.-'
-//     greetingHeader.classList.add('text-light', 'text-center')
-// }
-
-// ---------------------------------------------------------------------------------
-
-// IF STRUCTURE VIA TERNARY OPERATOR 
-
-// greetingHeader.innerHTML = `${guestName.length > 0 ? ('Wellcome ' + guestName[0].toUpperCase() + guestName.slice('1',guestName.length).toLowerCase() + '.') :'Welcome Mysterious Guy.'}`
-
-// ---------------------------------------------------------------------------------
-
 // TOSS GAME
 
 // declarations: 
@@ -165,11 +149,11 @@ let roundResult = document.querySelector('#roundResult')
 
 tossWallet.innerHTML = `$ ${walletAmount}`
 
-// head or tails
+// head or tails part
 
 headBtn.addEventListener('click', function headChoose() {
 
-  
+
   console.log('head click counter:' + headClickCounter)
   headClickCounter = headClickCounter + 1
   roundResult.classList.add('d-none')
@@ -207,12 +191,12 @@ tailsBtn.addEventListener('click', function tailsChoose() {
 
     if (headClickCounter === 0) {
       walletAmount = walletAmount - 10
-    tossWallet.innerHTML = `$ ${walletAmount}`
+      tossWallet.innerHTML = `$ ${walletAmount}`
     } else if (headClickCounter > 0) {
       headClickCounter = 1
-      
+
     }
-    
+
     console.log('user chose TAILS')
 
   } else if (tailsClickCounter > 1) {
@@ -243,7 +227,7 @@ tossBtn.addEventListener('click', () => {
 })
 
 
-// Animation End Event Listener 
+// animation end event Listener 
 
 tossBtn.addEventListener('animationend', () => {
   if (tossBinaryResult === 0) {
@@ -322,43 +306,127 @@ roundResult.addEventListener('click', function closeRoundResult() {
   headOrTailsChoiceDOM.innerHTML = ''
 })
 
+// ---------------------------------------------------------------------------------
+
+// BUTTON EXAMPLES
+let greeting1 = document.querySelector(`#greetingBtn1`)
+let greeting2 = document.querySelector(`#greetingBtn2`)
+let greeting3 = document.querySelector(`#greetingBtn3`)
+let greeting4 = document.querySelector(`#greetingBtn4`)
+let cta4 = document.querySelector(`#cta4`)
+
+greeting1.addEventListener('click', domClick)
+greeting2.addEventListener('click', changeColor)
+greeting3.addEventListener('mouseover', showPopover)
+
+function domClick() {
+  this.classList.toggle('btn-danger')
+  this.classList.toggle('btn-warning')
+}
+
+function changeColor() {
+  this.style.color == 'red' ? this.style.color = 'black' : this.style.color = 'red'
+}
+function showPopover() {
+  alert('gelme ustume')
+}
 
 
-// FORM SUBMIT COLOR SELECT EXERCISE 
+// ---------------------------------------------------------------------------------
+
+
+// BASIC COUNTER
+
+let plusBtn = document.querySelector(`#increaseBtn`)
+let minusBtn = document.querySelector(`#decreaseBtn`)
+let counterResultDOM = document.querySelector(`#counterResult`)
+let counter = localStorage.getItem('counter') ? Number(localStorage.getItem('counter')) : 0
+counterResultDOM.innerHTML = counter
+
+const counterFunc = (e) => {
+  e.target.id == 'increaseBtn' ? counter++ : counter--
+  localStorage.setItem('counter', counter)
+  counterResultDOM.innerHTML = counter
+}
+
+plusBtn.addEventListener('click', counterFunc)
+minusBtn.addEventListener('click', counterFunc)
+
+// ---------------------------------------------------------------------------------
+
+
+// color form 
 
 
 let colorForm = document.querySelector(`#formColor`)
-let selectForm = document.querySelector(`#selectColor`)
-let submitBtn = document.querySelector(`#formSubmitBtn`)
-let colorSquare = document.querySelector(`#colorResultSquare`)
+let selectColor = document.querySelector(`#selectColor`)
 let colorTitle = document.querySelector(`#colorResultTitle`)
+let colorSquare = document.querySelector(`#colorResultSquare`)
 
 
 
-selectForm.addEventListener('change', function showColor(e) {
-    let selectedColor = e.target.value
-    let eventType = e.type
-    console.log(`islem tipi: ${eventType} secilen renk: ${selectedColor}`)
+selectColor.addEventListener('change', function showColor(e) {
+  let selectedColor = e.target.value
+  let eventType = e.type
+  console.log(`islem tipi: ${eventType} secilen renk: ${selectedColor}`)
 })
 
 
 colorForm.addEventListener(`submit`, function getColor(e) {
-    e.preventDefault()
-    let selectedColor = selectForm.value
-    colorSquare.classList.toggle(`d-none`)
-    colorSquare.classList.add(`bg-${selectedColor}`)
+  e.preventDefault()
+  let selectedColor = selectColor.value
+  colorSquare.classList.toggle(`d-none`)
+  colorSquare.classList.add(`bg-${selectedColor}`)
 
-    
- 
+
   colorSquare.classList.remove('bg-success', 'bg-warning', 'bg-danger', 'bg-primary');
-
   colorSquare.classList.remove('d-none');
-
   colorSquare.classList.add(`bg-${selectedColor}`);
-
-  colorTitle.textContent = `Seçilen renk:`;
+  colorTitle.textContent = `Color chosen:`;
   colorTitle.classList.remove('d-none');
 
-    console.log(`form submitted succesfully, the selected color is: ${selectedColor}`)
+  console.log(`form submitted succesfully, the selected color is: ${selectedColor}`)
 })
 
+// ---------------------------------------------------------------------------------
+
+// Letter Grade Calculator 
+
+let letterGradeFormDOM = document.querySelector(`#gradeCalculator`)
+
+letterGradeFormDOM.addEventListener('submit', calculateGrade)
+
+function calculateGrade(e) {
+  e.preventDefault()
+  let courseName = String(document.querySelector('#courseName').value)
+  let firstExam = Number(document.querySelector('#firstExam').value)
+  let secondExam = Number(document.querySelector('#secondExam').value)
+  let finalScore = (firstExam * (4 / 10)) + (secondExam * (6 / 10))
+  
+  if (firstExam < 0 || firstExam > 100 || secondExam < 0 || secondExam > 100) {
+    alert('please enter a number between 0-100')
+  } else {
+    let letterGrade
+    
+    (finalScore >= 0 && finalScore < 40) ? letterGrade = 'FF' :
+    (finalScore >= 40 && finalScore < 50) ? letterGrade = 'FD' :
+    (finalScore >= 50 && finalScore < 55) ? letterGrade = 'DD' :
+    (finalScore >= 55 && finalScore < 60) ? letterGrade = 'DC' :
+    (finalScore >= 60 && finalScore < 70) ? letterGrade = 'CC' :
+    (finalScore >= 70 && finalScore < 80) ? letterGrade = 'CB' :
+    (finalScore >= 80 && finalScore < 85) ? letterGrade = 'BB' :
+    (finalScore >= 85 && finalScore < 90) ? letterGrade = 'BA' :
+    (finalScore >= 0 && finalScore <= 100) ? letterGrade = 'AA' : letterGrade = 'error'
+    
+    console.log(`final avarage score is: ${finalScore} letterGrade is: ${letterGrade}`)
+  }
+  
+}
+
+function addLetterGrade(courseName, examGrade) {
+  
+  
+}
+
+
+// ---------------------------------------------------------------------------------

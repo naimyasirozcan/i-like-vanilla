@@ -11905,7 +11905,11 @@ body {
 }
 
 .navbar {
+  border-radius: 20px;
   transition: background-color 0.6s ease, box-shadow 0.6s ease;
+  margin-top: 1rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 html {
@@ -11918,11 +11922,11 @@ html {
   color: #ffffff;
 }
 
-@media (min-width: 1669px) {
+/* @media (min-width: 1669px) {
   #HeroSection {
     height: 100vh;
   }
-}
+} */
 
 .text-pink {
   color: rgb(225, 60, 88) !important;
