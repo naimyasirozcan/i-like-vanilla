@@ -14,6 +14,8 @@
 </head>
 
 <body>
+    <div class="fixed-top" id="alertDOM"></div>
+
     <!-- NAVBAR START -->
     <nav id="mainNavbar" class="px-5 navbar navbar-expand-lg fixed-top navbar-dark navbar-default px-5">
         <!-- nav container -->
@@ -52,6 +54,7 @@
 
     <!-- =========================================================================================-->
 
+
     <!-- MAIN START -->
     <main>
         <!-- HERO START -->
@@ -71,15 +74,15 @@
                     <!-- greeting -->
 
                     <!-- GREETING FORM -->
-                    <div class="col-sm-5 pe-5 mb-sm-5">
+                    <div class="col-lg-5 order-sm-2 order-lg-1 pe-lg-5 mb-sm-5">
                         <h4 class="mb-3">If you want a call, just leave your contact info.</h4>
                         <!-- form start  -->
-                        <form id="heroForm" class="pe-5" method="post">
+                        <form id="heroForm" class="pe-lg-5" method="post">
                             <!-- name input  -->
                             <div class="mb-3">
-                                <label for="nameInput" class="form-label">Name</label>
-                                <input name="guestName" type="text" class="form-control" id="heroNameInput"
-                                    placeholder="Please type your full name">
+                                <label for="guestName" class="form-label">Name</label>
+                                <input id="guestName" name="guestName" type="text" class="form-control"
+                                    id="heroNameInput" placeholder="Please type your full name">
                             </div>
                             <!-- service input -->
                             <div class="mb-3">
@@ -91,20 +94,20 @@
                                     <option value="frontend project">Frontend Development</option>
                                     <option value="music recording">Music Recording</option>
                                     <option value="animation">Animation</option>
-                                    <option valufe="screenwriting">Screenwriting</option>
+                                    <option value="screenwriting">Screenwriting</option>
                                     <option value="other">Other</option>
                                 </select>
                             </div>
                             <!-- tel input -->
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Tel</label>
-                                <input type="tel" class="form-control" id="exampleInputPassword1"
+                                <label for="guestTel" class="form-label">Tel</label>
+                                <input id="guestTel" name="gusetTel" type="tel" class="form-control"
                                     placeholder="Please type your phone number with country code">
                             </div>
                             <!-- email input -->
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                <label for="guestMail" class="form-label">Email address</label>
+                                <input id="guestMail" name="guestMail" type="email" class="form-control"
                                     aria-describedby="emailHelp" placeholder="someone@example.com">
                             </div>
                             <div id="emailHelp" class="form-text-light">*We'll never share your email with anyone
@@ -113,8 +116,7 @@
 
                             <!-- form check -->
                             <div class="mb-3 form-check">
-                                <input name="accept" type="checkbox" class="form-check-input" id="heroFormCheck"
-                                    required>
+                                <input id="heroFormCheck" name="heroFormCheck" type="checkbox" class="form-check-input">
                                 <label class="form-check-label" for="heroFormCheck">I understand this websites owner can
                                     reach me for the service that I mentioned.</label>
                             </div>
@@ -124,7 +126,7 @@
                     <!-- greeting form  -->
 
                     <!-- carousel (right) -->
-                    <div class="col-sm-7">
+                    <div class="col-lg-7 order-sm-1 order-lg-2 mb-sm-5 mb-lg-1">
                         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
@@ -280,63 +282,42 @@
                 <!-- lists row  -->
                 <div class="row g-4">
 
-                    <!-- list 1 -->
+                    <!-- list 1 USER LIST -->
                     <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                         <div class="card w-100 rounded-4 text-light bg-glass-light"
                             style="min-height: 25rem; max-height: 25rem">
                             <div class="card-header border-bottom border-light">
-                                <h4 class="mb-0">List 1</h4>
+                                <h4 class="mb-0">User List</h4>
                             </div>
-                            <div id="list1" class="list-group overflow-auto">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    Cras justo odio
-                                </a>
-                                <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-                                <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-                                <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-                                <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at
-                                    eros</a>
-                            </div>
+                            <ul id="userList" class="list-group overflow-auto">
+
+                            </ul>
                         </div>
                     </div>
 
-                    <!-- list 2  -->
+                    <!-- list 2  LOREM LIST -->
                     <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                         <div class="card w-100 rounded-4 text-light bg-glass-light"
                             style="min-height: 25rem; max-height: 25rem">
                             <div class="card-header border-bottom border-light">
-                                <h4 class="mb-0">List 2</h4>
+                                <h4 class="mb-0">Lorem List</h4>
                             </div>
-                            <div id="list2" class="list-group overflow-auto">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    Cras justo odio
-                                </a>
-                                <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-                                <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-                                <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-                                <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at
-                                    eros</a>
-                            </div>
+                            <ul id="loremList" class="list-group overflow-auto">
+
+                            </ul>
                         </div>
                     </div>
 
-                    <!-- list 3  -->
+                    <!-- list 3 PRODUCT LIST -->
                     <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                         <div class="card w-100 rounded-4 text-light bg-glass-light"
                             style="min-height: 25rem; max-height: 25rem">
                             <div class="card-header border-bottom border-light">
-                                <h4 class="mb-0">List 3</h4>
+                                <h4 class="mb-0">Products</h4>
                             </div>
-                            <div id="list3" class="list-group overflow-auto">
-                                <a href="#" id="list3item1" class="list-group-item list-group-item-action active">
-                                    Cras justo odio
-                                </a>
-                                <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-                                <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-                                <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-                                <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at
-                                    eros</a>
-                            </div>
+                            <ul id="productList" class="list-group overflow-auto">
+
+                            </ul>
                         </div>
                     </div>
 
@@ -659,34 +640,59 @@
                         <form id="gradeCalculator">
                             <div class="mb-3">
                                 <label for="courseName">Course Name:</label>
-                                <input id="courseName" type="text" name="courseName" class="form-control" placeholder="Type course name">
+                                <input id="courseName" type="text" name="courseName" class="form-control"
+                                    placeholder="Type course name">
                             </div>
 
                             <div class="mb-3">
                                 <label for="firstExam">First Exam:</label>
-                                <input id="firstExam" type="number" name="firstExam" class="form-control" placeholder="Type exam score">
+                                <input id="firstExam" type="number" name="firstExam" class="form-control"
+                                    placeholder="Type exam score">
 
                             </div>
 
                             <div>
                                 <label for="secondExam">Second Exam:</label>
-                                <input id="secondExam" type="number" name="secondExam" class="form-control" placeholder="Type exam score">
+                                <input id="secondExam" type="number" name="secondExam" class="form-control"
+                                    placeholder="Type exam score">
 
                             </div>
 
                             <button id="letterGradeSubmit" class="btn btn-primary mt-3" type="submit"
                                 value="submit">Submit</button>
-                                
+
                             <button class="btn btn-danger mt-3 ms-3" type="reset">Reset</button>
-                                
+
                         </form>
-                         <div class="container mt-3">
+
+                        <!-- results  -->
+                        <div id="gradeResults" class="container mt-5 d-none">
+                            <h3>Results:</h3>
                             <ul id="letterGradeResultList" class="list-group">
-                                <li class="list-group-item"></li>
                             </ul>
-                         </div>
+                        </div>
                     </div>
-                    
+
+                </div>
+            </div>
+
+            <!-- to do list -->
+            <div class="container mb-5 bg-glass-light">
+                <div class="row" style="width: 100%; height: auto;">
+                    <div class="col-sm-12 p-5 text-left">
+                        <h1 class="text-center">To Do List</h1>
+                            <div class="mb-3 d-flex align-items-center justify-content-between">
+                                <input id="dailyTaskInput" type="text" name="dailyTaskInput" class="form-control me-2"
+                                    placeholder="What are you doing today?">
+                                    <button id="addDailyTask" class="btn btn-primary">Add</button>
+                            </div>
+                            
+
+                        <!-- list  -->
+                            <ul id="toDoList" class="list-group">
+                            </ul>
+                    </div>
+
                 </div>
             </div>
 
@@ -806,7 +812,8 @@
     <script src="/js/app.js"></script>
     <!-- <script src="/js/020-function-parameters.js"></script>
     <script src="/js/021-arrow-function"></script> -->
-    <script src="/js/022-dom-events.js"></script>
+    <!-- <script src="/js/022-dom-events.js"></script> -->
+    <script src="/js/031-array-yapisina-oge-eklemek-cikartmak-ve-guncellemek.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

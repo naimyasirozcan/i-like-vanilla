@@ -1,27 +1,38 @@
+console.log(this)
 
-console.log(`dom deneme konsola document id yazdirma: `, document.URL)
-
-// ---------------------------------------------------------------------------------
 // STICKY TOP MENU LISTENER
 
-const navbar = document.querySelector('#mainNavbar')
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 333) {
-    navbar.classList.remove('navbar-default')
+    navbarMain.classList.remove('navbar-default')
   } else {
-    navbar.classList.add('navbar-default')
+    navbarMain.classList.add('navbar-default')
   }
 })
 
-
-// ---------------------------------------------------------------------------------
-
+// ALERT 
 
 
-// HERO SECTION
+let navbarMain = document.querySelector('#mainNavbar')
+const alertDOM = document.querySelector('#alertDOM')
 
-// EVENT LISTENER EXAMPLES
+function alertFunction(header, message, className) {
+  let alertMessage = `<div class="alert alert-${className} alert-dismissible fade show" role="alert">
+  <strong>${header}</strong> ${message}
+  <button id="alertCloseBtn" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>`
+
+  alertDOM.innerHTML = alertMessage
+  navbarMain.classList.add('d-none')
+
+  let alertCloseBtn = document.querySelector('#alertCloseBtn')
+
+  alertCloseBtn.addEventListener('click', function closeAlert() {
+    navbarMain.classList.remove('d-none')
+    alertCloseBtn, removeEventListener('click', closeAlert)
+  })
+}
 
 // ---------------------------------------------------------------------------------
 // greeting section declarations
@@ -43,8 +54,6 @@ if (guestName) {
 
 let timeInfoDOM = document.querySelector('#timeInfoDOM')
 
-
-
 function getTimeLive() {
   const now = new Date()
   const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
@@ -63,32 +72,53 @@ function getTimeLive() {
 setInterval(getTimeLive, 1000)
 getTimeLive()
 
+// ---------------------------------------------------------------------------------
+// HERO FORM 
+let heroForm = document.querySelector(`#heroForm`)
 
+function sendHeroForm(e) {
+  e.preventDefault()
+  let guestName = document.querySelector('#guestName')
+  let heroFormSelect = document.querySelector('#heroFormSelect')
+  let guestMail = document.querySelector('#guestMail')
+  let guestTel = document.querySelector('#guestTel')
+  let heroFormCheck = document.querySelector('#heroFormCheck').checked
 
+  if (!heroFormCheck || guestName.value === '' || guestMail.value === '' || guestTel.value === '') {
+    alertFunction('Oops!', 'Please fill required boxes and check the box if you accept get contacted!', 'warning')
 
+  } else {
+    console.log(`talep basariyla alindi. misafir adi: ${String(guestName.value)} talep turu: ${heroFormSelect} kullanici maili: ${String(guestMail.value)} kullanici tel no: ${String(guestTel.value)}`)
+    guestName.value = ''
+    heroFormSelect.value = ''
+    heroFormCheck.value = ''
+    guestMail.value = ''
+    guestTel.value = ''
+    alertFunction('Success!', 'I will contact you ASAP.', "success")
+  }
+}
 
-
-
+heroForm.addEventListener('submit', sendHeroForm)
 
 // ---------------------------------------------------------------------------------
 
 // LOCAL STORAGE USAGE FIRST TRY
 
-let user = {
-  name: 'yasir',
-  surname: 'ozcan',
-  level: 'c1'
-}
+// let user = {
+//   name: 'yasir',
+//   surname: 'ozcan',
+//   level: 'c1'
+// }
 
-console.log(user)
+// console.log(user)
 
-localStorage.setItem('userInfo', JSON.stringify(user))
+// localStorage.setItem('userInfo', JSON.stringify(user))
 
-let userInfo = localStorage.getItem('userInfo')
+// let userInfo = localStorage.getItem('userInfo')
 
-userInfo = JSON.parse(userInfo)
+// userInfo = JSON.parse(userInfo)
 
-console.log(`local storagetan user bilgisi ${JSON.stringify(userInfo)}`)
+// console.log(`local storagetan user bilgisi ${JSON.stringify(userInfo)}`)
 
 
 // ---------------------------------------------------------------------------------
@@ -101,28 +131,102 @@ document.getElementById("test-paragraph-1").innerHTML = `this text changed by do
 
 // LISTS
 
-let list1FirstItem = document.querySelector(`#list1>a`)
-list1FirstItem.innerHTML += `info added`
-list1FirstItem.classList.remove('active')
+// for loop usage USER LIST
 
-let list1LastItem = document.querySelector(`#list1 a:last-child`)
-list1LastItem.classList.remove(`disabled`)
+const userListDOM = document.querySelector('#userList')
 
-let list2 = document.querySelector('#list2')
-let liDOM = document.createElement(`a`)
-liDOM.classList.add('list-group-item', 'list-group-item-action')
-liDOM.innerHTML = 'yeni bilgi eklendi'
-list2.append(liDOM)
+let userList = ['ayse', 'murat', 'sonmez', 'atanur']
 
-let list2FirstItem = document.querySelector('#list2 a:first-child')
-list2FirstItem.style.color = 'purple'
-console.log(list2FirstItem.innerHTML)
+for (i = 0; i < userList.length; i++) {
+  liDOM = document.createElement('li')
+  liDOM.classList.add('list-group-item', 'list-group-item-action')
+  liDOM.innerHTML = `${userList[i]}`
+  userListDOM.appendChild(liDOM)
+}
 
-let list3FirstItem = document.querySelector('#list3 a:first-child')
-list3FirstItem.innerHTML = `test dom`
+// break continue usage LOREM LIST (LIST 2)
 
-let list3LastItem = document.querySelector('#list3 a:last-child')
-list3LastItem.classList.remove('disabled')
+const loremListDOM = document.querySelector('#loremList')
+
+let loremList = ['lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'elit']
+
+// break usage: 
+
+console.log(`7 elemanli arrayi for dongusuyle konsola yazdir, 5. elemandan sonra (5. indekse yani 6. elemena geldiginde) dursun: `)
+for (i = 0; i < loremList.length; i++) {
+  if (i === 5) { break }
+  console.log(loremList[i])
+}
+
+// continue usage: 
+
+console.log(`7 elemanli arrayi for dongusuyle konsola yazdir, 'sit' icerikli indeksi atla: `)
+
+for (i = 0; i < loremList.length; i++) {
+  if (loremList[i] === 'sit') { continue }
+  let lidom = document.createElement('li')
+  lidom.classList.add('list-group-item', 'list-group-item-action')
+  lidom.innerHTML = loremList[i]
+  loremListDOM.appendChild(lidom)
+}
+
+// while kullanimi
+
+let whileCounter = 0
+while (whileCounter < 10) {
+  console.log(whileCounter)
+  whileCounter++
+}
+
+// forEach kullanimi
+
+const productListDOM = document.querySelector('#productList')
+
+let productList = ['elma', 'armut', 'erik', 'ananas', 'at yelesi', 'legen', 'kagit ogutucu', 'avrat', 'tabanca']
+
+console.log('productlist 3. elemani: ', productList[2])
+
+productList.forEach(item => {
+  let lidom = document.createElement('li')
+  lidom.classList.add('list-group-item', 'list-group-item-action')
+  lidom.innerHTML = item
+  productListDOM.appendChild(lidom)
+})
+
+// filter kullanimi 
+
+let newProducts = [...productList] //es6 copy ;)
+
+newProducts = newProducts.filter(item => item.length > 5)
+
+console.log(`filter methouduyla newProducts arrayinde sadece 6 karekter ve fazla olanlar kaldi: `, newProducts)
+
+// filter kullanimi array in array or obje  
+
+const USER_LIST = [
+  { fullName: "Ayse Sumer", isActive: false },
+  { fullName: "Ahmet Urgan", isActive: true },
+  { fullName: "Asya Basar", isActive: true },
+  { fullName: "Aksel Durmaz", isActive: false },
+]
+const ACTIVE_USERS = USER_LIST.filter(user => user.isActive)
+console.log(`aktif kullanicilar: `, ACTIVE_USERS)
+
+// map kullanimi 
+
+const SECOND_USER_LIST = ['yASiR', 'oZgE', 'mOruKcAn', 'BilGE', 'yUSuf', 'AyseNuR', 'VEHBi']
+
+const SECOND_USER_NEW = SECOND_USER_LIST.map(user => user.toUpperCase())
+
+console.log(`second user listteki ogelerin hepsi buyuk harfe cevrildi: `, SECOND_USER_NEW)
+
+// object ile map kullanimi: 
+
+const USER_OBJ = SECOND_USER_LIST.map(item => {
+  return { userName: item, shortName: `${item.slice(0, 1).toUpperCase()}.`, newName: `${item[0].toLocaleUpperCase()}${item.slice(1).split(" ")[0].toLowerCase()}` }
+})
+
+console.log('arrayden map yontemiyle yeni obje olusturuldu: ', USER_OBJ)
 
 // ---------------------------------------------------------------------------------
 
@@ -152,8 +256,6 @@ tossWallet.innerHTML = `$ ${walletAmount}`
 // head or tails part
 
 headBtn.addEventListener('click', function headChoose() {
-
-
   console.log('head click counter:' + headClickCounter)
   headClickCounter = headClickCounter + 1
   roundResult.classList.add('d-none')
@@ -353,10 +455,7 @@ plusBtn.addEventListener('click', counterFunc)
 minusBtn.addEventListener('click', counterFunc)
 
 // ---------------------------------------------------------------------------------
-
-
 // color form 
-
 
 let colorForm = document.querySelector(`#formColor`)
 let selectColor = document.querySelector(`#selectColor`)
@@ -393,8 +492,26 @@ colorForm.addEventListener(`submit`, function getColor(e) {
 // Letter Grade Calculator 
 
 let letterGradeFormDOM = document.querySelector(`#gradeCalculator`)
+let resultList = document.querySelector(`#letterGradeResultList`)
+let gradeResults = document.querySelector(`#gradeResults`)
 
 letterGradeFormDOM.addEventListener('submit', calculateGrade)
+
+const showFinalGrade = (courseName, finalScore, letterGrade) => {
+  if (gradeResults.classList.contains('d-none')) {
+    gradeResults.classList.remove('d-none')
+  }
+
+  let liDOM = document.createElement(`li`)
+
+  liDOM.innerHTML =
+    `<strong>${courseName}</strong>
+  <strong>Avarage: ${finalScore}</strong>
+  <span class="badge text-bg-primary rounded-pill">${letterGrade}</span>`
+
+  liDOM.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center')
+  resultList.appendChild(liDOM)
+}
 
 function calculateGrade(e) {
   e.preventDefault()
@@ -402,31 +519,67 @@ function calculateGrade(e) {
   let firstExam = Number(document.querySelector('#firstExam').value)
   let secondExam = Number(document.querySelector('#secondExam').value)
   let finalScore = (firstExam * (4 / 10)) + (secondExam * (6 / 10))
-  
-  if (firstExam < 0 || firstExam > 100 || secondExam < 0 || secondExam > 100) {
-    alert('please enter a number between 0-100')
-  } else {
-    let letterGrade
-    
-    (finalScore >= 0 && finalScore < 40) ? letterGrade = 'FF' :
-    (finalScore >= 40 && finalScore < 50) ? letterGrade = 'FD' :
-    (finalScore >= 50 && finalScore < 55) ? letterGrade = 'DD' :
-    (finalScore >= 55 && finalScore < 60) ? letterGrade = 'DC' :
-    (finalScore >= 60 && finalScore < 70) ? letterGrade = 'CC' :
-    (finalScore >= 70 && finalScore < 80) ? letterGrade = 'CB' :
-    (finalScore >= 80 && finalScore < 85) ? letterGrade = 'BB' :
-    (finalScore >= 85 && finalScore < 90) ? letterGrade = 'BA' :
-    (finalScore >= 0 && finalScore <= 100) ? letterGrade = 'AA' : letterGrade = 'error'
-    
-    console.log(`final avarage score is: ${finalScore} letterGrade is: ${letterGrade}`)
-  }
-  
-}
 
-function addLetterGrade(courseName, examGrade) {
-  
-  
+
+  if (firstExam < 0 || firstExam > 100 || secondExam < 0 || secondExam > 100 || firstExam == '' || secondExam == '') {
+    alert('please enter a number between 0-100')
+  } else if (courseName == '') {
+    alert('please enter a course name')
+  } else {
+
+    let letterGrade
+
+    (finalScore >= 0 && finalScore < 40) ? letterGrade = 'FF' :
+      (finalScore >= 40 && finalScore < 50) ? letterGrade = 'FD' :
+        (finalScore >= 50 && finalScore < 55) ? letterGrade = 'DD' :
+          (finalScore >= 55 && finalScore < 60) ? letterGrade = 'DC' :
+            (finalScore >= 60 && finalScore < 70) ? letterGrade = 'CC' :
+              (finalScore >= 70 && finalScore < 80) ? letterGrade = 'CB' :
+                (finalScore >= 80 && finalScore < 85) ? letterGrade = 'BB' :
+                  (finalScore >= 85 && finalScore < 90) ? letterGrade = 'BA' :
+                    (finalScore >= 0 && finalScore <= 100) ? letterGrade = 'AA' : letterGrade = 'error'
+
+    console.log(`course name: ${courseName} final avarage score is: ${finalScore} letterGrade is: ${letterGrade}`)
+    showFinalGrade(courseName, finalScore, letterGrade)
+  }
 }
 
 
 // ---------------------------------------------------------------------------------
+
+// TO DO LIST 
+const dailyTaskInput = document.querySelector('#dailyTaskInput')
+const toDoList = document.querySelector('#toDoList')
+const addTaskBtn = document.querySelector('#addDailyTask')
+
+function addTask() {
+  let task = dailyTaskInput.value.trim()
+
+  if (task === '' || task.length <= 2) {
+    alertFunction('Ooops!', 'You must type at least 2 charcters to add task!', 'danger')
+  } else {
+    let liDOM = document.createElement('li')
+    liDOM.innerHTML = `${task} <span class="btn btn-primary delete-task">×</span>`
+    liDOM.classList.add("list-group-item", "list-group-item-action", "task-list-item")
+    toDoList.appendChild(liDOM)
+
+    liDOM.addEventListener('click', function taskDone(e) {
+      if (e.target.tagName !== 'span') {
+        liDOM.classList.toggle('task-done')
+      }
+    })
+
+    let closeSpan = liDOM.querySelector('.delete-task')
+    closeSpan.addEventListener('click', function deleteTask(e) {
+      if (e.target.classList.contains('delete-task')) {
+        liDOM.remove()
+      }
+    })
+  }
+
+}
+
+addTaskBtn.addEventListener('click', addTask)
+
+
+

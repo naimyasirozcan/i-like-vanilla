@@ -11917,7 +11917,7 @@ html {
 }
 
 .list-group-item {
-  background: linear-gradient(135deg, #c4e0d50a, #4be0a21d);
+  background: linear-gradient(135deg, #35594b03, #4be0a209);
   border: none;
   color: #ffffff;
 }
@@ -12163,4 +12163,39 @@ html {
 #colorResultSquare {
   width: 100px;
   height: 100px;
+}
+
+
+#toDoList li.task-done::before {
+  content: "";
+  display: inline;
+  width: 16px;
+  height: 16px;
+  background-image: url('/assets/check.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 8px;
+}
+
+.task-list-item {
+  display: flex !important;
+  justify-content: space-between;
+  background: #0d6efd !important;
+  cursor: pointer;
+  align-items: center;
+}
+
+.task-list-item:hover {
+  background: blue !important;
+  color: #fff !important;
+}
+.task-done {
+  display: flex;
+  text-decoration: line-through !important;
+  color: white !important;
+  background-color: navy !important;
+}
+
+.task-list-item .delete-task {
+  text-decoration: none !important;
 }
