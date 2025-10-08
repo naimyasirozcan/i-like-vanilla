@@ -1,8 +1,8 @@
 # I LIKE VANILLA! 
-## class-lesson folder:
+## "class-lesson" folder:
 This folder includes the resources provided by patika.dev on my self-learning process. I created different js file for each lesson and took notes into these files. I created a test folder for test everything I've learned. Throughout this process, I made significant progress in using tools and technologies such as VS Code, Git, Git Bash, GitHub, GitHub CLI, Node, npm, and Bootstrap.
 
-## i-like-vanilla folder:
+## "website" folder:
 This is the folder of my example website: nyoworks.
 I thought a single page site that shows my beginner skills with various sections and mini applications would be good as my very first portfolio.
 I created standart sections and mini applications in shape of single page website, also we have a mini toss game in it!
