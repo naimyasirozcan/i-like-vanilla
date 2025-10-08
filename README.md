@@ -1,7 +1,11 @@
 # I LIKE VANILLA! 
-> ## The Storybook of My CSS & BS5 & VanillaJS Learning Process..
-This repository includes the resources provided to me via patika.dev while learning HTML, CSS, and JavaScript, along with the notes I took during the lessons and the practice projects I built based on them. It also contains the resulting website I created while experimenting with what I learned. Throughout this process, I made significant progress in using tools and technologies such as VS Code, Git, Git Bash, GitHub, GitHub CLI, Node, npm, and Bootstrap.
-Once the site is complete, I will update this README file and provide a sitemap. For my next project, I plan to use React and Tailwind CSS!! Wish me luck :)
+> ## class-lesson folder:
+This folder includes the resources provided by patika.dev on my self-learning process. I created different js file for each lesson and took notes into these files. I created a test folder for test everything I've learned. Throughout this process, I made significant progress in using tools and technologies such as VS Code, Git, Git Bash, GitHub, GitHub CLI, Node, npm, and Bootstrap.
+
+## i-like-vanilla folder:
+This is the folder of my example website: nyoworks.
+I thought a single page site that shows my beginner skills with various sections and mini applications would be good as my very first portfolio.
+I created standart sections and mini applications in shape of single page website, also we have a mini toss game in it!
 
 Screenshots:
 
@@ -37,4 +41,4 @@ a face with css:
 aaand the footer:
 ![alt text](image-11.png)
 
-i've tried to use only my knowledge and basic bootstrap layout, it was a hard but very efficient experience. i hope you enjoy, cheers.
+I've tried to use only my own knowledge, basic bootstrap layout and non-AI sources like MDN, W3, Stackoverflow etc. It was a hard but very efficient experience. I hope you enjoy, cheers.
