@@ -12166,12 +12166,14 @@ html {
 }
 
 
+/* to do list  */
+
 #toDoList li.task-done::before {
   content: "";
   display: inline;
   width: 16px;
   height: 16px;
-  background-image: url('/assets/check.png');
+  background-image: url('./assets/check.png');
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: 8px;
