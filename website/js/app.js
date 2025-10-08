@@ -259,10 +259,10 @@ headBtn.addEventListener('click', function headChoose() {
   console.log('head click counter:' + headClickCounter)
   headClickCounter = headClickCounter + 1
   roundResult.classList.add('d-none')
-  tossContainer.style.backgroundImage = "url('/assets/toss-default.png')"
+  tossContainer.style.backgroundImage = "url('/website/assets/toss-default.png')"
   userChoice = 0
   headOrTailsDOM.innerHTML = 'YOU SAID:'
-  headOrTailsChoiceDOM.innerHTML = `HEAD <img id="tossSurface" src="/assets/Ataturk.png" alt="">`
+  headOrTailsChoiceDOM.innerHTML = `HEAD <img id="tossSurface" src="./assets/Ataturk.png" alt="">`
   console.log('user chose HEAD')
 
   if (headClickCounter === 1) {
@@ -285,7 +285,7 @@ tailsBtn.addEventListener('click', function tailsChoose() {
   tailsClickCounter = tailsClickCounter + 1
 
   roundResult.classList.add('d-none')
-  tossContainer.style.backgroundImage = "url('/assets/toss-default.png')"
+  tossContainer.style.backgroundImage = "url('/website/assets/toss-default.png')"
   userChoice = 1
   headOrTailsDOM.innerHTML = 'YOU SAID:'
   headOrTailsChoiceDOM.innerHTML = 'TAILS 1₺'
@@ -333,7 +333,7 @@ tossBtn.addEventListener('click', () => {
 
 tossBtn.addEventListener('animationend', () => {
   if (tossBinaryResult === 0) {
-    tossBtn.innerHTML = `<img id="tossSurface" src="/assets/Ataturk.png" alt="">`
+    tossBtn.innerHTML = `<img id="tossSurface" src="./assets/Ataturk.png" alt="">`
     console.log('coin is HEAD')
   } else if (tossBinaryResult === 1) {
     tossBtn.innerHTML = `1₺`
@@ -352,24 +352,24 @@ tossBtn.addEventListener('animationend', () => {
     if (winRow === 1) {
       roundResult.innerHTML = 'You are lucky...Click for next round.'
       roundResult.classList.remove('d-none')
-      tossContainer.style.backgroundImage = "url('/assets/toss-think.png')"
+      tossContainer.style.backgroundImage = "url('/website/assets/toss-think.png')"
 
     } else if (winRow === 2) {
       roundResult.innerHTML = 'Two times, ha? Keep going.'
       roundResult.classList.remove('d-none')
-      tossContainer.style.backgroundImage = "url('/assets/toss-concern.png')"
+      tossContainer.style.backgroundImage = "url('/website/assets/toss-concern.png')"
     } else if (winRow === 3) {
       roundResult.innerHTML = 'You gonna make me poor, gambler?? One more time?'
       roundResult.classList.remove('d-none')
-      tossContainer.style.backgroundImage = "url('/assets/toss-angry.png')"
+      tossContainer.style.backgroundImage = "url('/website/assets/toss-angry.png')"
     } else if (winRow === 4) {
       roundResult.innerHTML = 'This is my first cry since I born'
       roundResult.classList.remove('d-none')
-      tossContainer.style.backgroundImage = "url('/assets/toss-cry.png')"
+      tossContainer.style.backgroundImage = "url('/website/assets/toss-cry.png')"
     } else {
       roundResult.innerHTML = 'I BEG YOU, STOP!!'
       roundResult.classList.remove('d-none')
-      tossContainer.style.backgroundImage = "url('/assets/toss-cry.png')"
+      tossContainer.style.backgroundImage = "url('/website/assets/toss-cry.png')"
     }
   } else if (userChoice !== tossBinaryResult) {
     winRow = 0
@@ -378,19 +378,19 @@ tossBtn.addEventListener('animationend', () => {
     if (loseRow === 1) {
       roundResult.innerHTML = 'Unlucky...Click for next round.'
       roundResult.classList.remove('d-none')
-      tossContainer.style.backgroundImage = "url('/assets/toss-concern.png')"
+      tossContainer.style.backgroundImage = "url('/website/assets/toss-concern.png')"
     } else if (loseRow === 2) {
       roundResult.innerHTML = 'Devil is not with you, one more?'
       roundResult.classList.remove('d-none')
-      tossContainer.style.backgroundImage = "url('/assets/toss-default.png')"
+      tossContainer.style.backgroundImage = "url('/website/assets/toss-default.png')"
     } else if (loseRow === 3) {
       roundResult.innerHTML = 'I think this game is not for you xD'
       roundResult.classList.remove('d-none')
-      tossContainer.style.backgroundImage = "url('/assets/toss-xd.png')"
+      tossContainer.style.backgroundImage = "url('/website/assets/toss-xd.png')"
     } else {
       roundResult.innerHTML = 'AHAAHAHAHAHAHAHAHHA!!!!!!'
       roundResult.classList.remove('d-none')
-      tossContainer.style.backgroundImage = "url('/assets/toss-xd.png')"
+      tossContainer.style.backgroundImage = "url('/website/assets/toss-xd.png')"
     }
   }
 

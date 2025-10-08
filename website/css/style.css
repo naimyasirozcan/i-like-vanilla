@@ -11941,7 +11941,7 @@ html {
   width: 100%;
   height: 75vh;
   overflow: hidden;
-  background-image: url(/assets/toss-default.png);
+  background-image: url(/website/assets/toss-default.png);
   border-radius: 100px;
   background-size: cover;
   background-position: center;
@@ -12173,7 +12173,7 @@ html {
   display: inline;
   width: 16px;
   height: 16px;
-  background-image: url('./assets/check.png');
+  background-image: url(/website/assets/check.png);
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: 8px;
