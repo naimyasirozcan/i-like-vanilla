@@ -10,7 +10,7 @@ I created standart sections and mini applications in shape of single page websit
 Screenshots:
 
 landing page:
-![landing page (hero banner form greeting)](i/screenshots/mage.png)
+![landing page (hero banner form greeting)](/screenshots/mage.png)
 
 cards and list:
 ![cards and lists](/screenshots/image-1.png)
